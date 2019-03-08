@@ -17,7 +17,7 @@ arr = np.array([np.array(tri),np.array(sq),np.array(penta),np.array(hexa),np.arr
 
 res = []
 
-def test(narr,x,n,m):
+def test(narr, x, n, m):
 	index = np.where(narr[n] < x, 0, np.where(narr[n] > x+100, 0, narr[n]))
 	index = np.nonzero(index)
 	for i in narr[n][index]:
@@ -26,7 +26,7 @@ def test(narr,x,n,m):
 			if str(i)[2:] == str(m)[:2]:
 				return True
 			return False
-		elif test(narr,num(i), n+1, m):
+		elif test(narr, num(i), n+1, m):
 			return True
 		else:
 			continue
