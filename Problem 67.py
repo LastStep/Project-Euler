@@ -20,7 +20,7 @@ for i in n:
 	temp = []
 	for k,j in enumerate(d[i]):
 		if k < len(d[i]) - 1: temp.append(max(d[i][k],d[i][k+1]))
-	d[i-1] = d[i-1] + np.array(temp)
+	d[i-1] += np.array(temp)
 
 print(d[0])
 
