@@ -11,7 +11,9 @@ for k,i in enumerate(f.readlines()):
 	i = [int(j) for j in i]
 	d[k] = np.array(i)
 	n = k
-	
+
+f.close()
+
 n = [i for i in range(n,0,-1)]
 	
 for i in n:
