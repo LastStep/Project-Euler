@@ -13,15 +13,12 @@ for k,i in enumerate(f.readlines()):
 	n = k
 
 f.close()
-
+	
 n = [i for i in range(n,0,-1)]
 	
 for i in n:
-	temp = []
-	for k,j in enumerate(d[i]):
-		if k < len(d[i]) - 1: temp.append(max(d[i][k],d[i][k+1]))
-	d[i-1] += np.array(temp)
-
+	d[i-1] += np.array([max(d[i][k],d[i][k+1]) for k in range(len(d[i])-1)])
+	
 print(d[0])
 
 end = time.time()
