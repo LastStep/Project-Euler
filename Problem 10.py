@@ -4,7 +4,7 @@ t1 = time.time()
 
 def sumprime(x):
     summ, s = [2], [True]*x
-    for i in range(3, x, 21):
+    for i in range(3, x, 2):
         if s[i]:
             summ.append(i)
             for j in range(i*i, x, i):
