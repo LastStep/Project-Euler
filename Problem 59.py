@@ -1,8 +1,8 @@
-import time
 from collections import Counter
 
 def timer(func):
     def wrapper(*args, **kwargs):
+      import time
       start = time.time()
       result = func(*args, **kwargs)
       end = time.time()
